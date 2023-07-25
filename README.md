@@ -12,20 +12,8 @@ FolodyOS is a simple Arch-based Linux distro made by Folody Community.
 - Download FolodyOS iso
 - Flash iso into an usb
 - Boot into usb
-- Login
 ```
-user: live
-pass: live
-```
-- Or login with root account
-```
-user: su
-pass: toor
-```
-- Run the installer
-```
-sudo calamares (live account)
-calamares (root account)
+pkexec calamares  (default passwd is live)
 ```
 
 # Build
