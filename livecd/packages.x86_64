@@ -224,6 +224,7 @@ xorg-apps
 xorg-drivers
 xorg-xkill
 xorg-xinit
+xorg-xauth
 
 # Networking
 avahi
@@ -343,3 +344,19 @@ mkinitcpio-openswap
 
 # AUR
 yay
+
+# Other things
+cairo
+dbus
+gdk-pixbuf2
+libxdg-basedir
+libxkbcommon-x11
+lua
+lua-lgi
+pango
+startup-notification
+xcb-util-cursor
+xcb-util-keysyms
+xcb-util-wm
+xcb-util-xrm
+libxfixes
