@@ -1,5 +1,7 @@
 #!/bin/sh
 
+chmod -R +x ~/.config/
+
 run() {
 	if ! pgrep -f "$1" ; then
 		"$@"&
