@@ -91,7 +91,7 @@ awful.keyboard.append_global_keybindings({
 	),
 	  awful.key(
 		{ mod }, "grave", function() 
-			awful.util.spawn("librewolf https://github.com/p3nguin-kun/penguinRice/wiki/2.-Keybindings-and-commands")
+			awful.util.spawn("firefox https://github.com/p3nguin-kun/penguinRice/wiki/2.-Keybindings-and-commands")
 		end,
         { description = "show keybindings list", group = "awesome" }
 	),

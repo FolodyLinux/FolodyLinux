@@ -475,7 +475,7 @@ local general = wibox.widget {
 
 local app = wibox.widget {
 	inputbox("Terminal", "terminal", user.terminal, "xst"),
-	inputbox("Web Browser", "browser", user.browser, "librewolf"),
+	inputbox("Web Browser", "browser", user.browser, "firefox"),
 	inputbox("File Manager", "files", user.files, "nemo"),
 	inputbox("Text Editor", "editor", user.editor, "nvim"),
 	inputbox("Music Player", "music", user.music, "xst -e ncmpcpp"),
