@@ -44,13 +44,7 @@ less
 libfido2
 libusb-compat
 linux
-linux-atm
 linux-firmware
-linux-firmware-bnx2x
-linux-firmware-marvell
-linux-firmware-qcom
-linux-firmware-qlogic
-linux-firmware-whence
 livecd-sounds
 lsscsi
 lvm2
@@ -130,7 +124,6 @@ cdrtools
 cryfs
 devtools
 dkms
-dvd+rw-tools
 efitools
 encfs
 f2fs-tools
@@ -165,7 +158,6 @@ sdl2
 tlp
 udftools
 udisks2
-unace
 unrar
 unzip
 upower
@@ -198,7 +190,6 @@ mpv
 # Pipewire - comment out pulseaudio packages if using pipewire
 pipewire
 pipewire-alsa
-pipewire-docs
 pipewire-jack
 pipewire-pulse
 wireplumber
@@ -256,7 +247,7 @@ freetype2
 arandr
 awesome-git
 brightnessctl
-btop
+btopspidermonkey
 dunst
 feh
 fish
@@ -265,7 +256,6 @@ gtk-engine-murrine
 inetutils
 inotify-tools
 firefox
-lmaofetch
 lxappearance-gtk3
 mpc
 mpd
