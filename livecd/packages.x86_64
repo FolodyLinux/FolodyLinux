@@ -91,7 +91,6 @@ reflector
 reiserfsprogs
 rp-pppoe
 rsync
-rxvt-unicode-terminfo
 screen
 sdparm
 sg3_utils
@@ -224,7 +223,6 @@ xorg-apps
 xorg-drivers
 xorg-xkill
 xorg-xinit
-xorg-xauth
 
 # Networking
 avahi
@@ -253,19 +251,6 @@ ttf-dejavu
 noto-fonts
 ttf-opensans
 freetype2
-
-# Printing Support
-cups
-cups-pdf
-cups-filters
-cups-pk-helper
-foomatic-db
-foomatic-db-engine
-ghostscript
-gsfonts
-gutenprint
-simple-scan
-system-config-printer
 
 # Window Manager
 arandr
@@ -344,19 +329,3 @@ mkinitcpio-openswap
 
 # AUR
 yay
-
-# Other things
-cairo
-dbus
-gdk-pixbuf2
-libxdg-basedir
-libxkbcommon-x11
-lua
-lua-lgi
-pango
-startup-notification
-xcb-util-cursor
-xcb-util-keysyms
-xcb-util-wm
-xcb-util-xrm
-libxfixes
