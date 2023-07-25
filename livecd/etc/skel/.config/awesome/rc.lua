@@ -32,4 +32,4 @@ require("theme")
 
 -- Autostart
 
-require("awful").spawn.with_shell("~/.config/awesome/autostart")
+require("awful").spawn.with_shell("sh ~/.config/awesome/autostart")
