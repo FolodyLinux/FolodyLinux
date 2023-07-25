@@ -193,12 +193,6 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 wireplumber
-# Pulseaudio - comment out pipewire packages if using pulseaudio
-# pulseaudio
-# pulseaudio-alsa
-# pulseaudio-bluetooth
-# pulseaudio-equalizer
-# pulseaudio-jack
 sox
 transcode
 x265
