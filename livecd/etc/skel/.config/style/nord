@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+for archivos in ~/.config/style_folder/nord/*; do
+	cp -R "${archivos}" ~/.config/
+done
+
+chmod -R +x ~/.config
+
+bspc wm -r
+pkill -USR1 -x sxhkd

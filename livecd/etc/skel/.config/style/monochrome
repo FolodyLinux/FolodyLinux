@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+for archivos in ~/.config/style_folder/monochrome/*; do
+	cp -R "${archivos}" ~/.config/
+done
+
+rm -rf ~/.config/zathura/zathurarc
+
+chmod -R +x ~/.config
+
+bspc wm -r
+pkill -USR1 -x sxhkd
