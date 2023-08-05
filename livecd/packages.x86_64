@@ -5,10 +5,8 @@ arch-install-scripts
 b43-fwcutter
 base
 bind
-brltty
 broadcom-wl-dkms
 btrfs-progs
-clonezilla
 cryptsetup
 darkhttpd
 ddrescue
@@ -22,7 +20,6 @@ dosfstools
 e2fsprogs
 edk2-shell
 efibootmgr
-espeakup
 ethtool
 exfatprogs
 f2fs-tools
@@ -31,7 +28,6 @@ fsarchiver
 gpart
 gpm
 gptfdisk
-grml-zsh-config
 grub
 hdparm
 hyperv
@@ -48,7 +44,6 @@ linux-firmware
 livecd-sounds
 lsscsi
 lvm2
-lynx
 man-db
 man-pages
 mc
@@ -76,7 +71,6 @@ partclone
 parted
 partimage
 pcsclite
-ppp
 pptpclient
 pv
 qemu-guest-agent
@@ -113,8 +107,6 @@ xl2tpd
 # System
 archiso
 archlinux-appstream-data
-aspell
-aspell-en
 base-devel
 bash-completion
 bluez
@@ -129,7 +121,6 @@ encfs
 f2fs-tools
 fuse3
 fwupd
-git
 gnome-keyring
 gocryptfs
 gparted
@@ -151,8 +142,6 @@ pacutils
 pahole
 pkgfile
 plocate
-python-setuptools
-python-sphinx
 sdl12-compat
 sdl2
 tlp
@@ -246,9 +235,9 @@ betterlockscreen
 bspwm
 dunst
 feh
-fish
 gtk-engine-murrine
 htop
+i3lock-color
 inetutils
 firefox
 lxappearance-gtk3
@@ -315,3 +304,6 @@ mkinitcpio-openswap
 
 # AUR
 yay
+
+# FolodyOS packages
+folodyos-bspwm
