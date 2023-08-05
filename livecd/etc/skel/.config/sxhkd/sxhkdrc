@@ -81,26 +81,23 @@ super + {Left,Down,Up,Right}
 super + BackSpace
   betterlockscreen -l
 
-super + shift + e
-  ~/.config/rofi/powermenu/powermenu.sh
-
 Print
   xfce4-screenshooter
 
 XF86AudioLowerVolume
-	~/.config/bspwm/scripts/volume-control down
+	pamixer -d 5 -u
 XF86AudioRaiseVolume
-	~/.config/bspwm/scripts/volume-control up
+	pamixer -i 5 -u
 XF86AudioMute
-  ~/.config/bspwm/scripts/volume-control toggle
+  pamixer -t
 
 XF86MonBrightnessDown
-  ~/.config/bspwm/scripts/brightness-control down
+  xbacklight -dec 5
 XF86MonBrightnessUp
-  ~/.config/bspwm/scripts/brightness-control up
+  xbacklight -inc 5
 
 super + grave
-  librewolf https://github.com/p3nguin-kun/penguinRice/wiki/Keybindings-and-commands
+  firefox https://github.com/p3nguin-kun/penguinRice/wiki/Keybindings-and-commands
 
 alt + space
   sh ~/.config/rofi/ricechanger/ricechanger.sh

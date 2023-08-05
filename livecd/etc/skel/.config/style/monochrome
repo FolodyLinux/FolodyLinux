@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
-for archivos in ~/.config/style_folder/monochrome/*; do
+for archivos in ~/.config/style_folder/monochrome/config/*; do
 	cp -R "${archivos}" ~/.config/
+done
+
+for archivos in ~/.config/style_folder/monochrome/home/*; do
+	cp -f "${archivos}" ~/
 done
 
 rm -rf ~/.config/zathura/zathurarc
 
 chmod -R +x ~/.config
+chmod +x ~/.fehbg
 
 bspc wm -r
 pkill -USR1 -x sxhkd

@@ -1,7 +1,10 @@
 #! /bin/sh
+# penguinRice (Everforest)
 
+# Start sxhkd
 sxhkd &
 
+# Workspaces
 workspaces() {
 	name=1
 	for monitor in $(bspc query -M); do
@@ -12,6 +15,7 @@ workspaces() {
 
 workspaces
 
+# bspwm config
 bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
 bspc config top_padding 0
@@ -30,42 +34,10 @@ bspc config gapless_monocle false
 bspc config focused_border_color \#a7c080
 bspc config normal_border_color \#9da9a0
 
-feh --bg-fill ~/wallpapers/everforest/everforest.png
+# Autostart
+~/.config/bspwm/autostart
 
-xrdb -load ~/.Xresources
-
-~/.config/polybar/launch.sh
-
-xsetroot -cursor_name left_ptr
-
+# Generate lockscreen wallpaper
 betterlockscreen -u ~/wallpapers/everforest/everforest.png
-
-picom --config ~/.config/picom/picom.conf &
-sleep 2
-
-nm-applet &
-
-numlockx on &
-
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
-xset s 480 dpms 600 600 600 &
-
-dunst --config ~/.config/dunst/dunstrc &
-
-~/.config/bspwm/scripts/low_bat_notifier.sh
-
-blueberry-tray &
-
-xfce4-power-manager --daemon &
-
-xss-lock -- betterlockscreen -l &
-
-ibus-daemon -drx &
-
-libinput-gestures-setup start
-xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Natural Scrolling Enabled" 1
-xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
-xinput set-prop "DLL07BE:01 06CB:7A13 Touchpad" "libinput Disable While Typing Enabled" 0
 
 export _JAVA_AWT_WM_NONREPARENTING=1

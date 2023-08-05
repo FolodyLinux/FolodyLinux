@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill ~/wallpapers/nord/nord.png
