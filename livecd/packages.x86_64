@@ -237,9 +237,7 @@ noto-fonts
 ttf-opensans
 freetype2
 ttf-roboto-mono
-ttf-roboto-mono-nerd
 ttf-sarasa-gothic
-ttf-icomoon-feather
 
 # Window Manager
 alacritty
