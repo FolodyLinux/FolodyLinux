@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="FolodyOS"
-iso_label="FOLODY_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%y%m)"
-iso_publisher="Folody Community <https://github.com/FolodyOS"
+iso_name="Folody OS"
+iso_label="FOLODY_$(date +%y%m%d)"
+iso_publisher="Folody OS <https://github.com/FolodyOS>"
 iso_application="FolodyOS LiveCD"
-iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%y%m%d)"
+iso_version="$(date +%y%m%d)"
 install_dir="arch"
 buildmodes=('iso')
 bootmodes=('bios.syslinux.mbr' 'bios.syslinux.eltorito'
@@ -19,7 +19,6 @@ file_permissions=(
   ["/etc/shadow"]="0:0:0400"
   ["/etc/gshadow"]="0:0:0400"
   ["/etc/sudoers"]="0:0:0440"
-  ["/etc/skel/.config"]="0:0:755"
   ["/root"]="0:0:750"
   ["/root/.automated_script.sh"]="0:0:755"
   ["/usr/local/bin/choose-mirror"]="0:0:755"
@@ -28,5 +27,6 @@ file_permissions=(
   ["/usr/local/bin/ezarch.bios"]="0:0:755"
   ["/usr/local/bin/ezarch.uefi"]="0:0:755"
   ["/usr/local/bin/ezmaint"]="0:0:755"
+  ["/usr/share/ezarcher/Scripts/"]="0:0:755"
   ["/usr/local/bin/grubinstall.sh"]="0:0:755"
 )

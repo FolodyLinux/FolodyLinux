@@ -2,9 +2,11 @@
 alsa-utils
 amd-ucode
 arch-install-scripts
+archinstall
 b43-fwcutter
 base
 bind
+brltty
 broadcom-wl-dkms
 btrfs-progs
 cryptsetup
@@ -20,11 +22,13 @@ dosfstools
 e2fsprogs
 edk2-shell
 efibootmgr
+espeakup
 ethtool
 exfatprogs
 f2fs-tools
 fatresize
 fsarchiver
+gnu-netcat
 gpart
 gpm
 gptfdisk
@@ -40,7 +44,13 @@ less
 libfido2
 libusb-compat
 linux
+linux-atm
 linux-firmware
+linux-firmware-bnx2x
+linux-firmware-marvell
+linux-firmware-qcom
+linux-firmware-qlogic
+linux-firmware-whence
 livecd-sounds
 lsscsi
 lvm2
@@ -49,7 +59,6 @@ man-pages
 mc
 mdadm
 memtest86+
-memtest86+-efi
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
@@ -105,30 +114,32 @@ xfsprogs
 xl2tpd
 
 # System
-archiso
-archlinux-appstream-data
 base-devel
 bash-completion
 bluez
 bluez-utils
-blueman
 cdrtools
 cryfs
 devtools
 dkms
+dvd+rw-tools
 efitools
 encfs
 f2fs-tools
 fuse3
 fwupd
+gnome-disk-utility
 gnome-keyring
 gocryptfs
-gparted
 haveged
+hspell
+htop
+hunspell
+hunspell-en_us
 hwdata
 hwdetect
 hwinfo
-inxi
+libburn
 libisofs
 libisoburn
 linux-headers
@@ -147,7 +158,7 @@ sdl2
 tlp
 udftools
 udisks2
-unrar
+unace
 unzip
 upower
 xdg-user-dirs
@@ -169,18 +180,26 @@ alsa-plugins
 alsa-firmware
 alsa-utils
 faac
+faad2
 ffmpeg
 ffmpegthumbnailer
 flac
-libdvdcss
+frei0r-plugins
+gstreamer
+lame
 libopenraw
 mencoder
+mjpegtools
 mpv
+poppler-glib
 # Pipewire - comment out pulseaudio packages if using pipewire
 pipewire
 pipewire-alsa
+pipewire-docs
 pipewire-jack
 pipewire-pulse
+alsa-card-profiles
+gst-plugin-pipewire
 wireplumber
 sox
 transcode
@@ -190,7 +209,6 @@ xvidcore
 
 # XORG
 mesa
-xclip
 xorg
 xorg-server
 xorg-apps
@@ -199,11 +217,10 @@ xorg-xkill
 xorg-xinit
 
 # Networking
-avahi
 curl
 dnsutils
 ethtool
-gnome-nettool
+firefox
 iptables-nft
 modemmanager
 net-tools
@@ -214,64 +231,83 @@ network-manager-applet
 nftables
 nm-connection-editor
 nss-mdns
-openbsd-netcat
-openresolv
 r8168
 wget
 whois
 
 # Fonts
 ttf-dejavu
+cantarell-fonts
 noto-fonts
+opendesktop-fonts
 ttf-opensans
 freetype2
 ttf-roboto-mono
-ttf-sarasa-gothic
 
-# Window Manager
-alacritty
-arandr
-betterlockscreen
-bspwm
-dunst
-feh
-gtk-engine-murrine
-htop
-i3lock-color
-inetutils
-firefox
-lxappearance-gtk3
-mpc
-mpd
-ncmpcpp
-nemo
-neovim
-pamixer
+# Printing Support
+cups
+cups-pdf
+cups-filters
+cups-pk-helper
+foomatic-db
+foomatic-db-engine
+ghostscript
+gsfonts
+gutenprint
+simple-scan
+system-config-printer
+
+# Minimal Gnome
+accountsservice
+adwaita-icon-theme
+adwaita-qt5
+adwaita-qt6
+baobab
+dconf-editor
+eog
+evince
+gnome-applets
+gnome-backgrounds
+gnome-bluetooth-3.0
+gnome-color-manager
+gnome-control-center
+gnome-desktop
+gnome-firmware
+gnome-font-viewer
+gnome-icon-theme-extras
+gnome-keyring
+gnome-menus
+gnome-packagekit
+gnome-screenshot
+gnome-session
+gnome-settings-daemon
+gnome-shell
+gnome-shell-extensions
+gnome-software
+gnome-terminal
+gnome-text-editor
+gnome-tweaks
+grilo-plugins
+gsound
+mutter
+nautilus
 pavucontrol
-picom
 polkit-gnome
-polybar
-qogir-icon-theme
-ranger
-rofi
-sed
-sxhkd
-xarchiver
+rygel
+sushi
+tldr
+totem
+tracker3-miners
+xdg-desktop-portal-gnome
 xdg-user-dirs-gtk
-xfce4-power-manager
-xfce4-screenshooter
-zathura
-zathura-pdf-mupdf
-zip
+yelp
 
 # Display Manager
-sddm
-sddm-sugar-dark
+gdm
 
 # Calamares dependencies (not listed elsewhere)
 boost
 boost-libs
-extra-cmake-modules
 gtk-update-icon-cache
 icu
 kconfig
@@ -301,9 +337,47 @@ yaml-cpp
 calamares
 ckbcomp
 mkinitcpio-openswap
+glibc
+boost
+boost-libs
+gtk-update-icon-cache
+icu
+kconfig
+kcoreaddons
+kdbusaddons
+kiconthemes
+ki18n
+kio
+kparts
+kpmcore
+kservice
+kwidgetsaddons
+libpwquality
+plasma-framework
+polkit-qt5
+qt5-location
+qt5-svg
+qt5-tools
+qt5-translations
+qt5-webengine
+qt5-xmlpatterns
+qt5ct
+solid
+yaml-cpp
 
 # AUR
 yay
 
-# FolodyOS packages
-folodyos-bspwm
+# Flatpak
+flatpak
+
+# Closed Source nvidia drivers
+#nvidia-dkms
+#nvidia-utils
+#lib32-nvidia-utils
+#nvidia-settings
+#vulkan-icd-loader
+#lib32-vulkan-icd-loader
+
+# Other
+alacritty

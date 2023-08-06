@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # EZ Arch Installer - BIOS
-# Revision: 2023.06.28 -- by eznix (https://sourceforge.net/projects/ezarch/)
+# Revision: 2022.12.06 -- by eznix (https://sourceforge.net/projects/ezarch/)
 # (GNU/General Public License version 3.0)
 
 # ----------------------------------------
@@ -35,7 +35,7 @@ welcome () {
   echo "=     Welcome to the Ezarch Installer Script      ="
   echo "=                                                 ="
   echo "=     BIOS Edition                                ="
-  echo "=     Revision: 2023.06.28                        ="
+  echo "=     Revision: 2022.12.06                        ="
   echo "=                                                 ="
   echo "=     Brought to you by eznix                     ="
   echo "=     https://sourceforge.net/projects/ezarch/    ="
@@ -340,7 +340,7 @@ instgrub () {
 
 instxorg () {
   clear
-  pacstrap /mnt xclip xorg xorg-apps xorg-drivers xorg-server xorg-server-xvfb xorg-xkill xorg-xinit xterm mesa
+  pacstrap /mnt xorg xorg-apps xorg-server xorg-drivers xorg-xkill xorg-xinit mesa
   clear
   echo -e "\n"
   echo "Xorg installed installed..."
@@ -350,7 +350,7 @@ instxorg () {
 
 instgen () {
   clear
-  pacstrap /mnt amd-ucode aspell aspell-en arch-install-scripts archiso bash-completion bind bluez bluez-utils btrfs-progs cdrtools cmake cryfs dd_rescue ddrescue devtools diffutils dkms dmidecode dvd+rw-tools efitools encfs exfatprogs f2fs-tools fatresize fsarchiver fuse3 fwupd git gnome-disk-utility gnome-keyring gocryptfs gpart gparted grsync gvfs gvfs-afc gvfs-goa gvfs-gphoto2 grsync gvfs-mtp gvfs-nfs gvfs-smb haveged hdparm hspell htop hunspell hunspell-en_us hwdata hwdetect hwinfo inxi intel-ucode jfsutils keepassxc mkinitcpio-archiso mkinitcpio-nfs-utils libburn libisofs libisoburn logrotate lsb-release lsscsi man-db man-pages mdadm ntfs-3g openssl p7zip pacutils packagekit pacman-contrib pahole papirus-icon-theme parted perl perl-data-dump perl-json perl-lwp-protocol-https perl-term-readline-gnu perl-term-ui pkgfile plocate polkit pv qt5ct reiserfsprogs rsync s-nail sdparm sdl2 sg3_utils smartmontools squashfs-tools sudo testdisk texinfo tlp udftools udisks2 unace unrar unzip upower usbmuxd usbutils vim which xdg-user-dirs xfsprogs
+  pacstrap /mnt amd-ucode aspell aspell-en arch-install-scripts archiso bash-completion bind bluez bluez-utils btrfs-progs cdrtools cmake cryfs dd_rescue ddrescue devtools diffutils dkms dmidecode dvd+rw-tools efitools encfs exfatprogs f2fs-tools fatresize fsarchiver fuse3 fwupd git gnome-disk-utility gnome-keyring gocryptfs gpart gparted grsync gvfs gvfs-afc gvfs-goa gvfs-gphoto2 grsync gvfs-mtp gvfs-nfs gvfs-smb haveged hdparm hspell htop hunspell hunspell-en_us hwdata hwdetect hwinfo intel-ucode jfsutils mkinitcpio-archiso mkinitcpio-nfs-utils libburn libisofs libisoburn logrotate lsb-release lsscsi man-db man-pages mdadm ntfs-3g openssl p7zip pacutils packagekit pacman-contrib pahole papirus-icon-theme parted perl perl-data-dump perl-json perl-lwp-protocol-https perl-term-readline-gnu perl-term-ui pkgfile plocate polkit pv qt5ct reiserfsprogs rsync s-nail sdparm sdl2 sg3_utils smartmontools squashfs-tools sudo testdisk texinfo tlp udftools udisks2 unace unrar unzip upower usbmuxd usbutils vim which xdg-user-dirs xfsprogs
   sleep 2
   arch-chroot /mnt systemctl enable bluetooth.service
   arch-chroot /mnt systemctl enable fstrim.timer
@@ -375,7 +375,7 @@ instcalamdep () {
 
 instmedia () {
   clear
-  pacstrap /mnt alsa-lib alsa-plugins alsa-firmware alsa-utils audacious audacious-plugins cdrdao dvdauthor faac faad2 ffmpeg ffmpegthumbnailer flac frei0r-plugins gstreamer gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi imagemagick lame libdvdcss libopenraw mencoder mjpegtools mpv poppler-glib pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack sox transcode smplayer x265 x264 xvidcore
+  pacstrap /mnt alsa-lib alsa-plugins alsa-firmware alsa-utils audacious audacious-plugins cdrdao dvdauthor faac faad2 ffmpeg ffmpegthumbnailer flac frei0r-plugins gstreamer gst-libav gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gstreamer-vaapi imagemagick lame libdvdcss libopenraw mencoder mjpegtools mpv poppler-glib pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack sox transcode x265 x264 xvidcore
   clear
   echo -e "\n"
   echo "Multimedia packages installed..."
@@ -385,7 +385,7 @@ instmedia () {
 
 instnet () {
   clear
-  pacstrap /mnt avahi b43-fwcutter broadcom-wl-dkms dhclient dmraid dnsmasq dnsutils ethtool filezilla firefox iwd net-tools networkmanager networkmanager-openvpn network-manager-applet nm-connection-editor nfs-utils nilfs-utils nss-mdns openbsd-netcat openconnect openresolv openssh openssl openvpn r8168 samba vsftpd wget wireless-regdb wireless_tools whois wpa_supplicant
+  pacstrap /mnt b43-fwcutter broadcom-wl-dkms dhclient dmraid dnsmasq dnsutils ethtool firefox iwd gnu-netcat net-tools networkmanager networkmanager-openvpn network-manager-applet nm-connection-editor nfs-utils nilfs-utils nss-mdns openconnect openresolv openssh openssl openvpn r8168 vsftpd wget wireless-regdb wireless_tools whois wpa_supplicant
   sleep 2
   arch-chroot /mnt systemctl enable NetworkManager.service
   clear
@@ -419,7 +419,7 @@ instprint () {
 
 instlxqt () {
   clear
-  pacstrap /mnt accountsservice aisleriot appstream-qt bluez-qt brightnessctl breeze-icons discover featherpad geany guvcview k3b kwin liblxqt libstatgrab libsysstat lximage-qt lxqt-about lxqt-admin lxqt-archiver lxqt-build-tools lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo lxqt-themes meld neofetch networkmanager-qt packagekit-qt5 pcmanfm-qt pavucontrol-qt print-manager qbittorrent qterminal screengrab xdg-desktop-portal-lxqt xpdf xscreensaver
+  pacstrap /mnt accountsservice aisleriot appstream-qt bluez-qt brightnessctl breeze-icons discover featherpad geany guvcview k3b kwin liblxqt libstatgrab libsysstat lximage-qt lxqt-about lxqt-admin lxqt-archiver lxqt-build-tools lxqt-config lxqt-globalkeys lxqt-notificationd lxqt-openssh-askpass lxqt-panel lxqt-policykit lxqt-powermanagement lxqt-qtplugin lxqt-runner lxqt-session lxqt-sudo lxqt-themes meld neofetch networkmanager-qt packagekit-qt5 pcmanfm-qt pavucontrol-qt print-manager qbittorrent qterminal screengrab xpdf xscreensaver
   sleep 2
   arch-chroot /mnt systemctl enable sddm.service
   clear
@@ -431,7 +431,7 @@ instlxqt () {
 
 instkde () {
 clear
-  pacstrap /mnt accountsservice aisleriot ark bluedevil breeze-icons bluez-qt discover dolphin geany guvcview gwenview k3b kcalc kinit konsole kwallet kwalletmanager kwin kwrite meld neofetch networkmanager-qt okular packagekit-qt5 pavucontrol-qt plasma print-manager qbittorrent sddm sddm-kcm spectacle sweeper xdg-desktop-portal-kde
+  pacstrap /mnt accountsservice aisleriot ark bluedevil breeze-icons bluez-qt discover dolphin geany guvcview gwenview k3b kcalc kinit konsole kwin kwrite meld neofetch networkmanager-qt okular packagekit-qt5 pavucontrol-qt plasma print-manager qbittorrent sddm sddm-kcm sweeper
   sleep 2
   arch-chroot /mnt systemctl enable sddm.service
   clear
@@ -443,7 +443,7 @@ clear
 
 instxfce () {
   clear
-  pacstrap /mnt accountsservice adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme asunder blueman catfish dconf-editor galculator geany gnome-firmware gnome-packagekit gtk-engine-murrine guvcview meld neofetch pavucontrol polkit-gnome sddm transmission-gtk xarchiver xdg-desktop-portal-gtk xfburn xfce4 xfce4-goodies xpdf
+  pacstrap /mnt accountsservice adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme blueman catfish dconf-editor epdfview galculator geany gnome-firmware gnome-packagekit gtk-engine-murrine guvcview meld neofetch pavucontrol polkit-gnome sddm transmission-gtk xarchiver xfburn xfce4 xfce4-goodies
   sleep 2
   arch-chroot /mnt systemctl enable sddm.service
   clear
@@ -455,7 +455,7 @@ instxfce () {
 
 instmate () {
   clear
-  pacstrap /mnt accountsservice adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme asunder blueman brasero dconf-editor geany gnome-firmware gnome-packagekit gtk-engine-murrine guvcview mate mate-applet-dock mate-extra mate-polkit meld neofetch sddm transmission-gtk xdg-desktop-portal-gtk
+  pacstrap /mnt accountsservice adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme asunder blueman brasero dconf-editor geany gnome-firmware gnome-packagekit gtk-engine-murrine guvcview mate mate-applet-dock mate-extra mate-polkit meld neofetch sddm transmission-gtk
   sleep 2
   arch-chroot /mnt systemctl enable sddm.service
   clear
@@ -467,12 +467,24 @@ instmate () {
 
 instcinn () {
   clear
-  pacstrap /mnt accountsservice adwaita-icon-theme adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme asunder blueman brasero cinnamon cinnamon-translations dconf-editor file-roller geany gnome-firmware gnome-packagekit gnome-terminal gsound gtk-engine-murrine guvcview meld nemo nemo-fileroller nemo-share neofetch pavucontrol polkit-gnome sddm tldr tmux transmission-gtk viewnior xdg-desktop-portal-gtk xed xpdf
+  pacstrap /mnt accountsservice adwaita-icon-theme adapta-gtk-theme aisleriot arc-gtk-theme arc-icon-theme asunder blueman brasero cinnamon cinnamon-translations dconf-editor epdfview file-roller geany gnome-firmware gnome-packagekit gnome-terminal gsound gtk-engine-murrine guvcview meld nemo nemo-fileroller nemo-share neofetch pavucontrol polkit-gnome sddm tldr tmux transmission-gtk viewnior xed
   sleep 2
   arch-chroot /mnt systemctl enable sddm.service
   clear
   echo -e "\n"
   echo "Cinnamon desktop installed..."
+  sleep 2
+  clear
+}
+
+instgnome () {
+  clear
+  pacstrap /mnt accountsservice adwaita-icon-theme adwaita-qt5 adwaita-qt6 aisleriot arc-gtk-theme arc-solid-gtk-theme baobab brasero dconf-editor eog evince gdm gnome-applets gnome-backgrounds gnome-bluetooth-3.0 gnome-calculator gnome-calendar gnome-characters gnome-clocks gnome-color-manager gnome-console gnome-control-center gnome-desktop gnome-firmware gnome-font-viewer gnome-icon-theme-extras gnome-keyring gnome-logs gnome-maps gnome-menus gnome-packagekit gnome-power-manager gnome-remote-desktop gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-software-packagekit-plugin gnome-system-monitor gnome-text-editor gnome-tweaks gnome-user-docs gnome-user-share gnome-video-effects gnome-weather grilo-plugins gsound guake guvcview gvfs-google meld mutter nautilus neofetch orca pavucontrol polkit-gnome rygel sushi tldr tmux tracker3-miners xdg-desktop-portal-gnome xdg-user-dirs-gtk yelp
+  sleep 2
+  arch-chroot /mnt systemctl enable gdm.service
+  clear
+  echo -e "\n"
+  echo "Gnome desktop installed..."
   sleep 2
   clear
 }
@@ -637,6 +649,7 @@ do
   echo "  3) XFCE"
   echo "  4) Mate"
   echo "  5) Cinnamon"
+  echo "  6) Gnome"
   echo ""
   echo "  R) Return to menu"
   echo -e "\n"
@@ -647,6 +660,7 @@ do
     3 ) instxfce ;;
     4 ) instmate ;;
     5 ) instcinn ;;
+    6 ) instgnome ;;
     r|R ) main_menu ;;
     * ) invalid ;;
   esac

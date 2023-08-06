@@ -1,3 +1,5 @@
+# remove from airootfs!
+# custom ezarcher hook
 [Trigger]
 Operation = Install
 Operation = Upgrade

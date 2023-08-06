@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Revision: 2023.04.10
+# Revision: 2022.11.23
 # (GNU/General Public License version 3.0)
+# by eznix (https://sourceforge.net/projects/ezarch/)
 
 # ----------------------------------------
 # Define Variables
@@ -26,7 +27,7 @@ MYUSRPASSWD="live"
 RTPASSWD="toor"
 # Pick a root password
 
-MYHOSTNM="penguinarch"
+MYHOSTNM="folodyos"
 # Pick a hostname for the machine
 
 # ----------------------------------------
@@ -36,7 +37,7 @@ MYHOSTNM="penguinarch"
 # Test for root user
 rootuser () {
   if [[ "$EUID" = 0 ]]; then
-    echo "ok"
+    continue
   else
     echo "Please Run As Root"
     sleep 2
@@ -61,6 +62,7 @@ sleep 2
 
 # Requirements and preparation
 prepreqs () {
+pacman -S --noconfirm archlinux-keyring
 pacman -S --needed --noconfirm archiso mkinitcpio-archiso
 }
 
@@ -78,7 +80,7 @@ rm -r ./ezreleng/syslinux
 # Remove auto-login, cloud-init, hyper-v, ied, sshd, & vmware services
 rmunitsd () {
 rm -r ./ezreleng/airootfs/etc/systemd/system/cloud-init.target.wants
-rm -r ./ezreleng/airootfs/etc/systemd/system/getty@tty1.service.d
+# rm -r ./ezreleng/airootfs/etc/systemd/system/getty@tty1.service.d
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_fcopy_daemon.service
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_kvp_daemon.service
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/hv_vss_daemon.service
@@ -88,7 +90,17 @@ rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/sshd.service
 rm ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/iwd.service
 }
 
-# Add cups, haveged, NetworkManager, & lightdm systemd links
+# Remove unwanted desktop files
+rmbloatdesktop () {
+rm -rf ./ezreleng/airootfs/usr/share/applications/cmake-gui.desktop
+rm -rf ./ezreleng/airootfs/usr/share/applications/bvnc.desktop
+rm -rf ./ezreleng/airootfs/usr/share/applications/avahi-discover.desktop
+rm -rf ./ezreleng/airootfs/usr/share/applications/stoken-gui.desktop
+rm -rf ./ezreleng/airootfs/usr/share/applications/stoken-gui-small.desktop
+rm -rf ./ezreleng/airootfs/usr/share/applications/qv4l2.desktop
+}
+
+# Add cups, haveged, NetworkManager, & sddm systemd links
 addnmlinks () {
 mkdir -p ./ezreleng/airootfs/etc/systemd/system/network-online.target.wants
 mkdir -p ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants
@@ -103,7 +115,7 @@ ln -sf /usr/lib/systemd/system/haveged.service ./ezreleng/airootfs/etc/systemd/s
 ln -sf /usr/lib/systemd/system/cups.service ./ezreleng/airootfs/etc/systemd/system/printer.target.wants/cups.service
 ln -sf /usr/lib/systemd/system/cups.socket ./ezreleng/airootfs/etc/systemd/system/sockets.target.wants/cups.socket
 ln -sf /usr/lib/systemd/system/cups.path ./ezreleng/airootfs/etc/systemd/system/multi-user.target.wants/cups.path
-ln -sf /usr/lib/systemd/system/sddm.service ./ezreleng/airootfs/etc/systemd/system/display-manager.service
+ln -sf /usr/lib/systemd/system/gdm.service ./ezreleng/airootfs/etc/systemd/system/display-manager.service
 }
 
 # Copy files to customize the ISO
@@ -114,8 +126,8 @@ cp packages.x86_64 ./ezreleng/
 cp -r grub ./ezreleng/
 cp -r efiboot ./ezreleng/
 cp -r syslinux ./ezreleng/
-chmod -R +x etc/skel/.config
 cp -r etc ./ezreleng/airootfs/
+cp -r opt ./ezreleng/airootfs/
 cp -r usr ./ezreleng/airootfs/
 ln -sf /usr/share/ezarcher ./ezreleng/airootfs/etc/skel/ezarcher
 }
@@ -206,8 +218,8 @@ sed -i "s/pc105/"${KEYMOD}"/g" ./ezreleng/airootfs/etc/default/keyboard
 sed -i "s/us/"${KEYMP}"/g" ./ezreleng/airootfs/etc/default/keyboard
 sed -i "s/en_US/"${LCLST}"/g" ./ezreleng/airootfs/etc/default/locale
 sed -i "s/en_US/"${LCLST}"/g" ./ezreleng/airootfs/etc/locale.conf
-echo ""${LCLST}".UTF-8 UTF-8" > ./ezreleng/airootfs/etc/locale.gen
-echo "C.UTF-8 UTF-8" >> ./ezreleng/airootfs/etc/locale.gen
+#echo ""${LCLST}".UTF-8 UTF-8" > ./ezreleng/airootfs/etc/locale.gen
+#echo "C.UTF-8 UTF-8" >> ./ezreleng/airootfs/etc/locale.gen
 }
 
 # Start mkarchiso
@@ -226,6 +238,7 @@ cleanup
 cpezreleng
 addnmlinks
 rmunitsd
+rmbloatdesktop
 cpmyfiles
 sethostname
 crtpasswd
@@ -236,7 +249,6 @@ setkeylayout
 crtkeyboard
 crtlocalec
 runmkarchiso
-
 
 # Disclaimer:
 #

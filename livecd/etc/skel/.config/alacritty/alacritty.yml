@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/everforest.yml
+  - ~/.config/alacritty/dracula.yml
   - ~/.config/alacritty/fonts.yml
   
 window:
