@@ -2,7 +2,6 @@
 alsa-utils
 amd-ucode
 arch-install-scripts
-archinstall
 b43-fwcutter
 base
 bind
@@ -11,13 +10,11 @@ broadcom-wl-dkms
 btrfs-progs
 cryptsetup
 darkhttpd
-ddrescue
 dhclient
 dhcpcd
 diffutils
 dmidecode
 dmraid
-dnsmasq
 dosfstools
 e2fsprogs
 edk2-shell
@@ -43,7 +40,6 @@ less
 libfido2
 libusb-compat
 linux
-linux-atm
 linux-firmware
 linux-firmware-bnx2x
 linux-firmware-marvell
@@ -55,7 +51,6 @@ lsscsi
 lvm2
 man-db
 man-pages
-mc
 mdadm
 memtest86+
 mkinitcpio
