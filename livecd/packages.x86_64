@@ -28,7 +28,6 @@ exfatprogs
 f2fs-tools
 fatresize
 fsarchiver
-gnu-netcat
 gpart
 gpm
 gptfdisk
@@ -81,7 +80,6 @@ parted
 partimage
 pcsclite
 pptpclient
-pv
 qemu-guest-agent
 refind
 reflector
@@ -131,7 +129,6 @@ fwupd
 gnome-disk-utility
 gnome-keyring
 gocryptfs
-haveged
 hspell
 htop
 hunspell
@@ -273,7 +270,6 @@ gnome-color-manager
 gnome-control-center
 gnome-desktop
 gnome-firmware
-gnome-font-viewer
 gnome-icon-theme-extras
 gnome-keyring
 gnome-menus
