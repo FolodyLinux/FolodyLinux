@@ -1,4 +1,4 @@
-# FolodyOS custom settings
+# FolodyLinux custom settings
 # SPDX-FileCopyrightText: no
 # SPDX-License-Identifier: CC0-1.0
 #
@@ -9,7 +9,7 @@
 # Additional styling can be done using the stylesheet.qss
 # file, also in the branding directory.
 ---
-componentName:  folodyos
+componentName:  folodylinux
 
 
 ### WELCOME / OVERALL WORDING
