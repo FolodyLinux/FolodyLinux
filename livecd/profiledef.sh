@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="Folody OS"
+iso_name="Folody Linux"
 iso_label="FOLODY_$(date +%y%m%d)"
-iso_publisher="Folody OS <https://github.com/FolodyOS>"
-iso_application="FolodyOS LiveCD"
+iso_publisher="Folody Linux <https://github.com/FolodyOS/FolodyLinux>"
+iso_application="FolodyLinux LiveCD"
 iso_version="$(date +%y%m%d)"
 install_dir="arch"
 buildmodes=('iso')
@@ -26,7 +26,6 @@ file_permissions=(
   ["/usr/local/bin/livecd-sound"]="0:0:755"
   ["/usr/local/bin/ezarch.bios"]="0:0:755"
   ["/usr/local/bin/ezarch.uefi"]="0:0:755"
-  ["/usr/local/bin/ezmaint"]="0:0:755"
   ["/usr/share/ezarcher/Scripts/"]="0:0:755"
   ["/usr/local/bin/grubinstall.sh"]="0:0:755"
 )
