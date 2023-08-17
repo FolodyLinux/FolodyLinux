@@ -123,13 +123,13 @@ navigation: widget
 # are set to "true" (they can also be overridden).
 strings:
     productName:         "@{NAME}"
-    shortProductName:    FolodyOS
+    shortProductName:    Folody Linux
     version:             2023
     shortVersion:        2023
-    versionedName:       FolodyOS Linux
-    shortVersionedName:  FolodyOS Linux
-    bootloaderEntryName: FolodyOS
-    productUrl:          https://github.com/FolodyOS/FolodyOS
+    versionedName:       Folody Linux
+    shortVersionedName:  Folody Linux
+    bootloaderEntryName: Folody Linux
+    productUrl:          https://github.com/FolodyOS/FolodyLinux
 
 # These images are loaded from the branding module directory.
 #
